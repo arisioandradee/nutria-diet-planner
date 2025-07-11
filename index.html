@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutr•IA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <main>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo Nutr•IA">
+            <p class="subtitulo-logo">Seu assistente digital para planos de dieta personalizados e rápidos.</p>
+        </div>
+
+        <div class="container">
+
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: João" required>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" placeholder="Ex: 20" required>
+
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="altura" placeholder="Ex: 180" required>
+
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso" placeholder="Ex: 80" required>
+
+                <label for="objetivo">Objetivo:</label>
+                <textarea id="objetivo" name="objetivo" placeholder="Ex: Quero perder peso comendo chocolate uma vez na semana" required></textarea>
+
+                <button type="submit">Gerar plano</button>
+            </form> <!-- Fim do form-->
+        </div> </form> <!-- Fim do container-->
+    </main> </form> <!-- Fim da main-->
+
+    <div id="resultado" style="background: #fff; color: #000; padding: 2rem; border-radius: 12px; max-width: 800px; margin: 2rem auto; font-family: Arial, sans-serif;"></div>
+    <script src="script.js"></script>
+</body>
+</html>

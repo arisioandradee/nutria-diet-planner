@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+    color: #fff;
+}
+
+body {
+    background: linear-gradient(135deg, #274472 0%, #1b3559 50%, #0f2240 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* MAIN */
+main {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+main .logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main .logo img{
+    width: 350px;
+    height: auto;
+}
+
+main .logo p{
+    font-size: 20px;
+    margin-top: -110px;
+    margin-bottom: 2rem;
+    color: #fff; 
+    opacity: 0.7;
+}
+
+main .container {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #3b557f;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: auto;
+    box-shadow: 0 0 12px rgba(67, 231, 173, 0.3);
+}
+
+/*Animações*/
+main .container {
+    opacity: 0;
+    transform: translateY(2rem);
+
+    animation: animacao;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+}
+@keyframes animacao {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+}
+
+input, textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #3b557f;
+    border-radius: 5px;
+    padding: 0.8rem;
+    color: #fff;
+    resize: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #9572FC;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+    padding: 0.9rem;
+    background: linear-gradient(45deg, #4a6ea9, #274472);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 1rem rgba(186, 174, 255, 0.2);
+}
+
+/* JS */
+#resultado, #resultado * {
+    color: #222 !important;  
+    font-family: 'Inter', sans-serif !important;
+    background: none !important;
+}
+#resultado h2 {
+    color: #2c3e50 !important;
+}
+#resultado ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+#resultado li {
+    margin-bottom: 0.5rem;
+}
+
+/*Escondendo as setinhas (kkkk)*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
